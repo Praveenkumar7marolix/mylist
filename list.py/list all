@@ -1,0 +1,64 @@
+def merge_lists(list1, list2):
+    merged_list = list1 + list2
+    return merged_list
+
+def sum_of_list(numbers):
+    return sum(numbers)
+
+def print_even_numbers(numbers):
+    even_numbers = [num for num in numbers if num % 2 == 0]
+    print("Even numbers:", even_numbers)
+
+def print_odd_numbers(numbers):
+    odd_numbers = [num for num in numbers if num % 2 != 0]
+    print("Odd numbers:", odd_numbers)
+
+def delete_element_at_index(numbers, index):
+    if index < 0 or index >= len(numbers):
+        print("Invalid index.")
+    else:
+        del numbers[index]
+
+def insert_element_at_location(numbers, element, location):
+    if location < 0 or location > len(numbers):
+        print("Invalid location.")
+    else:
+        numbers.insert(location, element)
+
+def insert_element_at_end(numbers, element):
+    numbers.append(element)
+
+def check_list_sizes(list1, list2):
+    if len(list1) == len(list2):
+        return True
+    else:
+        return False
+
+# Example lists
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+
+merged_list = merge_lists(list1, list2)
+print("Merged list:", merged_list)
+
+numbers = [1, 2, 3, 4, 5]
+print("Sum of numbers:", sum_of_list(numbers))
+
+print_even_numbers(numbers)
+print_odd_numbers(numbers)
+
+delete_element_at_index(numbers, 2)
+print("List after deleting element:", numbers)
+
+insert_element_at_location(numbers, 10, 1)
+print("List after inserting element:", numbers)
+
+insert_element_at_end(numbers, 6)
+print("List after inserting at end:", numbers)
+
+list3 = [7, 8, 9]
+list4 = [10, 11]
+if check_list_sizes(list3, list4):
+    print("Both lists have the same size.")
+else:
+    print("Lists have different sizes.")
